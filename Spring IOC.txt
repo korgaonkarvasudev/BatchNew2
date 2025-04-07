@@ -1,0 +1,166 @@
+1)What is Spring/Interface 21 ?
+-its a modular framework which helps us to built web app
+-Distributed App
+
+2)Spring Alternative of
+-EJB (Enterprise Java Beans)
+-Servlet JSP
+
+3)Versions of Spring
+-I-7 modules
+-II-6 modules (web+web MVC)
+-III-6 modules (Annotations)
+-IV-7 modules (Messiging+Annotation Modification)
+-V-7 modules (Base Line set- jdk1.7,tomacat8.0,sql-5,hbm5,Kotlin support)
+
+4)Modules in Spring
+-IOC(Core)
+-AOP(Aspect Orirnted Programing)
+-MVC(Model View Controller)
+-DAO(Data Access)
+-Test
+-Messiging
+-Instrumentation
+
+5)What is IOC
+-Inversion Of Control
+-Object Creation is given to spring
+-Spring create baeans at runtime which helps to reduce of classes
+-Which our app lossely coupled
+
+6)IOC sub modules
+-Core
+-Beans
+-Context
+-Expression
+
+7)What is Container
+-Helps read xml file or cfg file
+-Creates Beans
+-Maintain life-cycle of bean
+-Distroy bean whenever needed
+
+8)Container in IOC
+-Core(BeanFactory)
+-J2EE(AppliacationContext)
+
+9)Difference between Core And J2EE
+-BeanFactory(I)                                      -Apc(I)
+-doesn't Read xml file directly(req Rescource)       -Read file directly
+-Lazy loading                                        -Egar Loading
+-Depricated                                          -Internally call BF
+-XMlConfigBeanFactory                                -ClassPathXMLApc
+-Reads Only one file at time                         -Can read multiple
+
+10)Injection
+-Providing properties at runtime
+
+11)Dependency Injection
+-Injecting one Bean into another at runtime
+
+12)Types of DI
+-Property Base(Setter Base)
+-Constructor Base
+
+13)Difference betn Constructor and Property Base
+-Using parametrized Constructor                -Using Setter getter
+-Insertion order must Preserve                 -Not Req
+-Partial Injection not allowed                 -Allowed
+-Cant Override the Setter base Value           -Overrride the value of CB
+-It creates new instance after modification    -Override the value of Exisiting obj
+
+14)What is Scope
+-How Many Obj to be created for single bean defined by scope
+
+15)Scope in Spring
+-Singleton
+-Prototype
+-Session
+-Request
+-Global-Session
+
+16)Scope in IOC
+-Singleton
+-Prototype
+
+16)Diff Betn Singleton And Prototype
+-Default                               -Use Defined
+-Create One obj for one bean           -Create multiple obj for one bean
+
+17)Why we look-up method
+-If parent scope is singleton and your child scope is Prototype then ehile creating   obj it set child scope as singleton as per parent Scope
+-To overcome this problem we provide look-Up method
+-We in delcred in parent bean
+-It just gives instruction to bean to read the scope of child once
+
+18)What is wiring
+-Connecting two beans via injection(ref="_")
+
+19)What is AutoWiring and why we use
+-Automatic Connecting two beans
+-In one xml file while creating bean we have DI then we have to go through all the beans in xml file to find excat requriement
+-the DI we are doing Manually it does automatically for us
+
+20)Modes of Autowiring
+-no=by dafult
+-byType=wire bean of same dataType (Req Only one in xml)(PB)
+-byName=wire bean by varibale and bean name(PB)
+-constructor=internally byType then byName(CB)
+-autodected=Constructor but it is depricate in 3.0
+
+21)Limitaion Of autowiring
+-can't autowire primitive dataTypes
+-string included
+
+22)Explain Spring Bean Life cycle
+
+23)why we create custom init and distory method
+-if we want to perform some operation or give some properties to bean before creating
+we custom init
+-while distroying bean we want to perform some opration we cutom distroy
+
+24)How we create custom init and distory method
+-Three ways to create
+I-XML Base (init-method="" distroy-method="")
+II-Interface Implementation [InitilizingBean(I)-aterPropertiesSet()],[DisposalBean(I)-distrory()]
+III-Annotaion (@PostConstruct,@PreDistory)
+
+25)Diff betn Spring and Servlte Bean Life cycle
+-In spring Bean Life cycle after instatnsitaion next step is populate properties and init method called aferterwards
+-But,in servlet Bean Life cycle after instatnsitaion next step is calling init method and populate properties is done afterwards
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
